@@ -14,9 +14,12 @@ class JSONEditorWidget(Widget):
 
     class Media:
         js = (
-            'https://cdn.jsdelivr.net/npm/@json-editor/json-editor@1.3.5/dist/jsoneditor.min.js',
+            'https://cdn.jsdelivr.net/npm/@json-editor/json-editor@2.15.1/dist/jsoneditor.min.js',
             'django_jsonforms/jsoneditor_init.js'
         )
+        css = {
+            'all': ['https://cdn.jsdelivr.net/npm/@json-editor/json-editor@2.15.1/src/themes/html.min.css'],
+        }
 
     def __init__(self, schema, options, *args, **kwargs):
         super(JSONEditorWidget, self).__init__(*args, **kwargs)
